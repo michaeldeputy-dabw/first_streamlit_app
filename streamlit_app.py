@@ -47,7 +47,7 @@ streamlit.write('The user entered ', fruit_choice)
 streamlit.header("The fruit load list contains:")
 #Snowflake-replated functions
 def get_fruit_load_List():
-   with My_cnx.cursor() as my_cur:
+   with my_cnx.cursor() as my_cur:
       my_cur.execute("Select * from fruit_load_list")
       return my_cur.fetchall()
    
